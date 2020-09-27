@@ -1,0 +1,138 @@
+.navbar-brand {
+	color: white;
+}
+.navbar-brand:hover {
+	color: white;
+}
+.navbar-brand span {
+	color: rgb(13, 13, 13);
+}
+.nav-link {
+	font-size: 16px;
+	text-transform: uppercase;
+	padding-left: 1em !important;
+	padding-right: 1em !important;
+	color: white;
+}
+.nav-link:hover {
+	color: white;
+}
+.nav-item.active {
+	border-left: #444 3px solid;
+}
+
+.carousel-item {
+	height: 450px;
+}
+.carousel-image-1 {
+	background: url('../img/image1.jpg');
+	background-size: cover;
+}
+.carousel-image-2 {
+	background: url('../img/image2.jpg');
+	background-size: cover;
+}
+.carousel-image-3 {
+	background: url('../img/image3.jpg');
+	background-size: cover;
+}
+.row p{
+	font-size: 20px;
+}
+.fa {
+	font-size: 50px;
+}
+.img-card {
+	height: 90%;
+}
+.img-card img {
+	height: 100%;
+	width: 100%;
+}
+#signup-form .card {
+	border-radius: 30px;
+	border: 2px #00802b solid !important;
+}
+.card h4 {
+	float: left;
+	font-size: 30px;
+	margin-top: 20px;
+	padding: 13px;
+	color: #00802b;
+}
+#signup-form .form-group input {
+	border: none;
+	border-bottom: 1px #00802b solid !important;
+}
+.button {
+	border-radius: 40px;
+	border: 1px #00802b solid !important;
+}
+.img-box{
+	background: url('../img/music.jpg');
+	border: 1px #00802b solid !important;
+	border-radius: 10px;
+	background-size: cover;
+}
+.paragraph {
+	margin-top: 5px;
+}
+.paragraph a {
+	text-decoration: none;
+	color: #00802b
+}
+
+.dashboard {
+	min-height: 600px;
+}
+.dashboard h3 {
+	color: white;
+}
+.sidebar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+.sidebar li a{
+    display: block;
+    color: white;
+    padding: 16px 0 16px 32px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.sidebar li a:hover {
+    background-color: white;
+    color: green;
+}
+.sidebar .fa{
+	font-size: 25px;
+}
+.sidebar-bottom {
+	margin-top: 100px;
+	padding: 0;
+	width: 200px;
+}
+.sidebar-bottom a{
+	 display: block;
+    color: white;
+    padding: 16px 0 16px 32px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.sidebar-bottom a:hover {
+	background-color: white;
+	color: green;
+}
+.sidebar-bottom .fa{
+	font-size: 30px;
+}
+.dashboard-button {
+	width: 300px;
+	border-radius: 50px;
+	border: 1px #00802b solid !important;
+	font-size: 20px;
+}
+.dashboard-button .fa{
+	font-size: 30px;
+}
