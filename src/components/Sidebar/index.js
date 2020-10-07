@@ -22,12 +22,12 @@ class Sidebar extends Component {
 
                 <ul className="list-unstyled components">
                     <li className={`${dashboardClass}`}>
-                        <a href="#menu" ><i className="fa fa-home"></i> HOME</a>   
+                        <a href="/home" ><i className="fa fa-home"></i> HOME</a>   
                     </li>
                     <li>
                         <a href="#Products" className="nav-link dropdown-toggle" data-toggle="dropdown">PRODUCTS</a>
                         <div className="dropdown bg-dark text-center">
-                            <a href="#akagera.html" className={`${newProductClass} dropdown-item`}><i className="fa fa-product-hunt"></i> Add New</a>
+                            <a href="/newproduct" className={`${newProductClass} dropdown-item`}><i className="fa fa-product-hunt"></i> Add New</a>
                             <a href="nyungwe.html" className={`${viewProductClass} dropdown-item`}><i className="fa fa-database"></i> View All</a>
                         </div>
                         
@@ -35,8 +35,8 @@ class Sidebar extends Component {
                     <li>
                         <a href="#Products" className="dropdown-toggle" data-toggle="dropdown">ORDERS</a>
                         <div className="dropdown bg-dark text-center" id="dropdown">
-                            <a href="#akagera.html" className={`${newOrderClass} dropdown-item`}><i className="fa fa-shopping-bag"></i> New Order</a>
-                            <a href="nyungwe.html" className={`${viewOrderClass} dropdown-item`}><i className="fa fa-shopping-cart"></i> View All</a>
+                            <a href="#akagera.html" className={`${newOrderClass} dropdown-item`}><i className="fa fa-shopping-cart"></i> New Order</a>
+                            <a href="nyungwe.html" className={`${viewOrderClass} dropdown-item`}><i className="fa fa-database"></i> View All</a>
                         </div> 
                     </li>
                     <li>

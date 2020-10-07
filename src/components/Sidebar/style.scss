@@ -74,6 +74,10 @@ a, a:hover, a:focus {
     color: #343a40;
     background: #fff;
 }
+.dropdown a.active {
+    color: #fff;
+    background: rgb(13, 13, 13);
+}
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
