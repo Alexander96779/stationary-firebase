@@ -1,0 +1,55 @@
+.loading {
+    width: 100px;
+    height: 100px;
+    margin: 22% auto;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 5px solid #A2AAB1;
+    position: relative;
+    vertical-align: middle;
+    animation: a1 2s linear infinite;
+
+    &::before, 
+    &::after {
+        content: '';
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: -5px;
+        box-sizing: border-box;
+        border-top: 5px solid #A2AAB1;
+        border-radius: 50%;
+    }
+
+    &::before {
+        transform: rotate(120deg);
+    }
+
+    &::after {
+        transform: rotate(240deg);
+    }
+
+    span {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        color: #000000;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 100px;
+        animation: a2 2s linear infinite;
+    }
+}
+
+@keyframes a1 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes a2 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
