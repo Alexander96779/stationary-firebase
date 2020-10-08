@@ -35,7 +35,8 @@ class NewProduct extends Component {
     }
 render() {
     const {name, quantity, supplier_name, supplier_email, description, price } = this.state;
-return(
+        const { newProduct } = this.props;
+    return(
     <div>
         <div className="main-content">
             <Navbar />
@@ -122,11 +123,19 @@ return(
                                         </textarea>
                                     </div>
                                 </div>
-                                <input 
-                                type="submit"
-                                value="Add to stock"
-                                className="btn btn-dark btn-block"
-                                />
+                                {
+                                    newProduct.isLoading ?
+                                        <input 
+                                         type="submit"
+                                         value="Adding to stock"
+                                         className="btn btn-dark btn-block"
+                                        />
+                                    : <input 
+                                        type="submit"
+                                        value="Add to stock"
+                                        className="btn btn-dark btn-block"
+                                       />
+                                }
                             </form>
                             </div>
                         </div>
