@@ -28,6 +28,13 @@ const displayProducts = (state = initialState, action) => {
                 isLoading: false
             };
         }
+        case 'DELETE_SUCCESS': {
+            let index = state.products.findIndex( (product) => product.id === action.payload);
+            state.products.splice(index, 1);
+            return {
+                ...state,
+            }
+        }
         default: {
             return state;
         }
