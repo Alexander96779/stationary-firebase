@@ -3,7 +3,7 @@ import cogoToast from 'cogo-toast';
 import { 
 VIEW_ALL_START,
 VIEW_ALL_SUCCESS,
-VIEW_ALL_ERROR
+VIEW_ALL_ERROR,
 } from './actionTYpes';
 
 export const apiStart = () => ({
@@ -14,6 +14,7 @@ export const apiSuccess = (payload) => ({
     type: VIEW_ALL_SUCCESS,
     payload
 });
+
 
 export const apiError = (error) => ({
     type: VIEW_ALL_ERROR,
