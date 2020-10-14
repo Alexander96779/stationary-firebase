@@ -99,7 +99,7 @@ render() {
                                     <div className="col mb-3">
                                     <small className="form-text ml-2 mb-1">Must be in Rwf</small>
                                     <input 
-                                    type="text"
+                                    type="number"
                                     name="price"
                                     value={price}
                                     placeholder="Unit Price"
