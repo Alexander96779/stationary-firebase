@@ -35,7 +35,7 @@ class Sidebar extends Component {
                     <li>
                         <a href="#Products" className="dropdown-toggle" data-toggle="dropdown">ORDERS</a>
                         <div className="dropdown bg-dark text-center" id="dropdown">
-                            <a href="#akagera.html" className={`${newOrderClass} dropdown-item`}><i className="fa fa-shopping-cart"></i> New Order</a>
+                            <a href="/neworder" className={`${newOrderClass} dropdown-item`}><i className="fa fa-shopping-cart"></i> New Order</a>
                             <a href="nyungwe.html" className={`${viewOrderClass} dropdown-item`}><i className="fa fa-database"></i> View All</a>
                         </div> 
                     </li>

@@ -1,0 +1,3 @@
+export const NEW_ORDER_START = 'NEW_ORDER_START';
+export const NEW_ORDER_SUCCESS = 'NEW_ORDER_SUCCESS';
+export const NEW_ORDER_ERROR = 'NEW_ORDER_ERROR';
