@@ -42,7 +42,6 @@ export const viewAll = () => (dispatch) => {
     })
     .catch((err) => {
         dispatch(apiError(err));
-        console.log(err);
         showErrorMessage('Error displaying products');
     });
 }
