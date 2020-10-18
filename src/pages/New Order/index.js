@@ -54,7 +54,7 @@ onChangep2 = (event) => {
 onChangep3 = (event) => {
     if(event.target.checked){
     this.setState({
-      product3: 'Calk',
+      product3: 'Chalk',
     });
 } else {
     this.setState({
