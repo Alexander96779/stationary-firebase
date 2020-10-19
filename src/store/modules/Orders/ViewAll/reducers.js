@@ -4,6 +4,7 @@ const initialState = {
     error: null
 };
 
+
 const displayOrders = (state = initialState, action) => {
     const { type, payload, error } = action;
 
@@ -27,6 +28,13 @@ const displayOrders = (state = initialState, action) => {
                 error: error,
                 isLoading: false,
             };
+        }
+        case 'DELETE_ORDER_SUCCESS': {
+            let index = state.orders.findIndex( (order) => order.id === action.payload);
+            state.orders.splice(index, 1);
+            return {
+                ...state,
+            }
         }
         default: {
             return state;
