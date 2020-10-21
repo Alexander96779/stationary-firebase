@@ -39,8 +39,8 @@ class Sidebar extends Component {
                             <a href="/allorders" className={`${viewOrderClass} dropdown-item`}><i className="fa fa-database"></i> View All</a>
                         </div> 
                     </li>
-                    <li>
-                        <a href="#reports" className={`${reportsClass}`}><i className="fa fa-folder"></i> REPORTS</a>
+                    <li className={`${reportsClass}`}>
+                        <a href="/reports"><i className="fa fa-folder"></i> REPORTS</a>
                     </li>    
                 </ul>      
             </nav>
