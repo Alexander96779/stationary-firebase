@@ -5,6 +5,7 @@ import displayProducts from './modules/Products/ViewAll/reducers';
 import updateProduct from './modules/Products/Update/reducers';
 import makeOrder from './modules/Orders/New/reducers';
 import displayOrders from './modules/Orders/ViewAll/reducers'
+import productsReport from './modules/Reports/reducers';
 
 const rootReducer = combineReducers({
 
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
     displayProducts,
     updateProduct,
     makeOrder,
-    displayOrders
+    displayOrders,
+    productsReport
 });
 
 export default rootReducer;

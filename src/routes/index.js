@@ -6,6 +6,7 @@ import NewProduct from '../pages/New Product';
 import ViewAll from '../pages/All Products';
 import NewOrder from '../pages/New Order'
 import AllOrders from '../pages/All Orders';
+import Reports from '../pages/Reports';
 
 export default function index() {
     return(
@@ -16,6 +17,7 @@ export default function index() {
             <Route path="/allproducts" exact component={ViewAll} />
             <Route path="/neworder" exact component={NewOrder} />
             <Route path="/allorders" exact component={AllOrders} />
+            <Route path="/reports" exact component={Reports} />
         </Switch>
     )
 }
