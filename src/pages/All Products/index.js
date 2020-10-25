@@ -6,6 +6,7 @@ import Spinner from '../../components/Spinner';
 import { viewAll } from '../../store/modules/Products/ViewAll/actions';
 import { deleteProduct } from '../../store/modules/Products/Delete/actions';
 import { editProduct } from '../../store/modules/Products/Update/actions';
+import useProtectedRoute from '../../routes/ProtectedRoute';
 
 class ViewAll extends Component {
 
@@ -55,6 +56,7 @@ class ViewAll extends Component {
     }
 
 render() {
+    useProtectedRoute();
     const { displayProducts } = this.props;
     const renderProducts = () => (
         displayProducts.products.length > 0
@@ -204,7 +206,7 @@ render() {
 }
 
 const mapStateToProps = (state) =>({
-    displayProducts: state.displayProducts,
+    displayProducts: state.displayProducts
 });
 
 const mapDispatchToProps = (dispatch) => ({

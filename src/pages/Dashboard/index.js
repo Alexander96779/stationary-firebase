@@ -1,9 +1,12 @@
 import React, { Component} from 'react';
+import { connect } from 'react-redux';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
+import useProtectedRoute from '../../routes/ProtectedRoute';
 
 class Dashboard extends Component {
     render() {
+        useProtectedRoute();
         return (
     <div>
         <div className="main-content">
@@ -103,4 +106,8 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => ({
+    authenticated: state.loginUser,
+});
+
+export default connect( mapStateToProps, null) (Dashboard);

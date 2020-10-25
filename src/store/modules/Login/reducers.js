@@ -33,14 +33,19 @@ const loginUser = (state = initialState, action) => {
             };
         }
         case 'SIGNOUT_SUCCESS': {
+            console.log('Logging out');
             return {
-                ...state
-            }
+                ...state,
+                user: null,
+                isAuthenticated: false
+            };
         }
         case 'SIGNOUT_ERROR': {
             return {
-                ...state
-            }
+                ...state,
+                error: error
+            };
+            
         }
         default: {
             return state;
