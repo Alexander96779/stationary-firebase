@@ -7,6 +7,7 @@ import Spinner from '../../components/Spinner';
 import './style.scss';
 import { viewAll } from '../../store/modules/Orders/ViewAll/actions';
 import { deleteOrder } from '../../store/modules/Orders/Delete/actions';
+import useProtectedRoute from '../../routes/ProtectedRoute';
 
 class AllOrders extends Component {
 
@@ -33,6 +34,7 @@ class AllOrders extends Component {
     }
 
     render() {
+        useProtectedRoute();
         const { displayOrders } = this.props;
         const reqOrder = this.state.reqOrder;
         let foundData = displayOrders.orders[reqOrder];
@@ -221,7 +223,7 @@ class AllOrders extends Component {
 }
 
 const mapStateToProps = (state) =>({
-    displayOrders: state.displayOrders,
+    displayOrders: state.displayOrders
 });
 
 const mapDispatchToProps = (dispatch) =>({

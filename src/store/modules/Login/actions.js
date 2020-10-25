@@ -23,6 +23,15 @@ const apiError = (error) => ({
     error,
 });
 
+const signoutSuccess = () => ({
+    type: SIGNOUT_SUCCESS,
+});
+
+const signoutError = (error) => ({
+    type: SIGNOUT_ERROR,
+    error,
+});
+
 const showErrorMessage = (message) => {
     cogoToast.error(message, { position: 'top-right' });
 };
@@ -60,13 +69,14 @@ export const login = (email, password) => async (dispatch) => {
 export const signOut = () => (dispatch) => {
     firebase
     .auth()
-    .signOut().then(() =>{
-        dispatch({ type: SIGNOUT_SUCCESS});
+    .signOut()
+    .then(() =>{
+        dispatch(signoutSuccess());
         history.push('/');
     })
     .catch((err) => {
-        showSuccessMessage('Can not logout', err);
-        dispatch({ type: SIGNOUT_ERROR});
+        dispatch(signoutError(err));
+        showErrorMessage('Can not logout');
     });
 }
 

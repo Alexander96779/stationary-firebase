@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { signOut } from '../../store/modules/Login/actions';
@@ -12,8 +13,8 @@ class Navbar extends Component {
             <div id="navNavbar">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <a href="#h" className="nav-link" onClick={() => this.props.signOut()}>
-                            <i className="fa fa-power-off" aria-hidden="true"></i> Logout</a>
+                        <a  className="nav-link" onClick={() => this.props.signOut()}>
+                            <i className="fa fa-power-off"></i> Logout</a>
                     </li>
                 </ul>
             </div>
@@ -23,10 +24,8 @@ class Navbar extends Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return{
-        signOut: () => dispatch(signOut())
-    }
-}
+const mapDispatchToProps = (dispatch) => ({
+        signOut: () => dispatch(signOut()),
+});
 
 export default connect(null, mapDispatchToProps) (Navbar);

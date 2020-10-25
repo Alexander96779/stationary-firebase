@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import { productsPdf } from '../../store/modules/Reports/actions';
+import useProtectedRoute from '../../routes/ProtectedRoute';
 
 class Reports extends Component {
 
     render(){
+        useProtectedRoute();
         return(
             <div>
                 <div className="main-content">

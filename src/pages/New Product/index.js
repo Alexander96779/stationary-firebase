@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import { addProduct } from '../../store/modules/Products/New/actions';
+import useProtectedRoute from '../../routes/ProtectedRoute';
 import './style.scss';
 
 class NewProduct extends Component {
@@ -34,8 +35,9 @@ class NewProduct extends Component {
             supplier_email, description, price);
     }
 render() {
+    useProtectedRoute();
     const {name, quantity, supplier_name, supplier_email, description, price } = this.state;
-        const { newProduct } = this.props;
+    const { newProduct } = this.props;
     return(
     <div>
         <div className="main-content">

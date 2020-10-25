@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import { addNewOrder } from '../../store/modules/Orders/New/actions';
+import  useProtectedRoute from '../../routes/ProtectedRoute';
 
 class NewOrder extends Component {
     constructor(props) {
@@ -71,6 +72,7 @@ onChangep3 = (event) => {
         addNewOrder(name, phone_number, product1, product2, product3, quantity1, quantity2, quantity3);
     }
     render() {
+        useProtectedRoute();
         const {name, phone_number, product1, product2, product3,
         quantity1, quantity2, quantity3} = this.state; 
         const { newOrder } = this.props;
